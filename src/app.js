@@ -17,46 +17,49 @@ let userData = null,
 						function(userData){
 
 							console.log(userData);
-							$("#grid").kendoGrid({
+							setInterval(function(){
+								$("#loader").hide();
+								$("#grid").kendoGrid({
 
-								dataSource: {
-											data: userData,
-											pageSize: 3
+									dataSource: {
+												data: userData,
+												pageSize: 3
+												},
+
+									//height: 200,
+									selectable: "multiple cell",
+									sortable: true,
+									scrollable: false,
+									pageable: {
+												input: true,
+												numeric: false
+												},
+									reorderable: true,
+									resizable: true,
+									columns: [{
+												field: "name",
+												title: "Name",
 											},
-
-								//height: 200,
-								sortable: true,
-								scrollable: false,
-								pageable: {
-											input: true,
-											numeric: false
+											  {
+												field: "phone",
+												title: "Contact Number",
 											},
-								reorderable: true,
-								resizable: true,
-								columns: [{
-											field: "name",
-											title: "Name",
-										},
-										  {
-											field: "phone",
-											title: "Contact Number",
-										},
-										  {
-											field: "email",
-											title: "Email",
-										},
-										  {
-											field: "company.name",
-											title: "Company",
-										},
-										  {
-											field: "address.street+', '+address.city",
-											title: "Address",
-											sortable: false
-										}
+											  {
+												field: "email",
+												title: "Email",
+											},
+											  {
+												field: "company.name",
+												title: "Company",
+											},
+											  {
+												field: "address.street+', '+address.city",
+												title: "Address",
+												sortable: false
+											}
 
-										 ]
+											 ]
 
-								});
+									});}, 4000);
 							}
 				});

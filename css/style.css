@@ -22,4 +22,10 @@ nav {
 #grid-wrapper {
   padding: 20px; }
 
+#loader {
+  margin: auto;
+  text-align: center; }
+  #loader img {
+    width: 250px; }
+
 /*# sourceMappingURL=maps/style.css.map */
