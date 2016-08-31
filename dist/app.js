@@ -32,6 +32,8 @@ $.ajax({
 				input: true,
 				numeric: false
 			},
+			reorderable: true,
+			resizable: true,
 			columns: [{
 				field: "name",
 				title: "Name"
