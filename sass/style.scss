@@ -1,0 +1,36 @@
+$font-stack: 'Open Sans', sans-serif;
+$primary-color: #333;
+
+body {
+	font: 14px $font-stack;
+	color: $primary-color;
+	padding: 0;
+	margin: 0;
+}
+
+nav {
+	height: 50px;
+	width: 100%;
+	margin: 0;
+
+	ul {
+		margin: 0;
+		padding: 15px;
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: block;
+		padding: 6px 12px;
+		text-decoration: none;
+	}
+}
+
+#grid-wrapper{
+
+	padding: 20px;
+}
