@@ -17,7 +17,7 @@ let userData = null,
 						function(userData){
 
 							console.log(userData);
-							setInterval(function(){
+
 								$("#loader").hide();
 								$("#grid").kendoGrid({
 
@@ -27,7 +27,7 @@ let userData = null,
 												},
 
 									//height: 200,
-									selectable: "multiple cell",
+									//selectable: "multiple cell",
 									sortable: true,
 									scrollable: false,
 									pageable: {
@@ -60,6 +60,6 @@ let userData = null,
 
 											 ]
 
-									});}, 4000);
+									});
 							}
 				});

@@ -18,45 +18,44 @@ $.ajax({
 	success: function success(userData) {
 
 		console.log(userData);
-		setInterval(function () {
-			$("#loader").hide();
-			$("#grid").kendoGrid({
 
-				dataSource: {
-					data: userData,
-					pageSize: 3
-				},
+		$("#loader").hide();
+		$("#grid").kendoGrid({
 
-				//height: 200,
-				selectable: "multiple cell",
-				sortable: true,
-				scrollable: false,
-				pageable: {
-					input: true,
-					numeric: false
-				},
-				reorderable: true,
-				resizable: true,
-				columns: [{
-					field: "name",
-					title: "Name"
-				}, {
-					field: "phone",
-					title: "Contact Number"
-				}, {
-					field: "email",
-					title: "Email"
-				}, {
-					field: "company.name",
-					title: "Company"
-				}, {
-					field: "address.street+', '+address.city",
-					title: "Address",
-					sortable: false
-				}]
+			dataSource: {
+				data: userData,
+				pageSize: 3
+			},
 
-			});
-		}, 4000);
+			//height: 200,
+			//selectable: "multiple cell",
+			sortable: true,
+			scrollable: false,
+			pageable: {
+				input: true,
+				numeric: false
+			},
+			reorderable: true,
+			resizable: true,
+			columns: [{
+				field: "name",
+				title: "Name"
+			}, {
+				field: "phone",
+				title: "Contact Number"
+			}, {
+				field: "email",
+				title: "Email"
+			}, {
+				field: "company.name",
+				title: "Company"
+			}, {
+				field: "address.street+', '+address.city",
+				title: "Address",
+				sortable: false
+			}]
+
+		});
 	}
 });
 //# sourceMappingURL=app.js.map
